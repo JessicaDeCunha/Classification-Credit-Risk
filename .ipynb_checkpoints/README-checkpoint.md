@@ -4,12 +4,22 @@
 
 ## Background
 
-Mortgages, student and auto loans, and debt consolidation are just a few examples of credit and loans that people seek online. Peer-to-peer lending services such as Loans Canada and Mogo let investors loan people money without using a bank. However, because investors always want to mitigate risk, it would be helpful to predict credit risk with machine learning techniques.
+Mortgages, student and auto loans, and debt consolidation are just a few examples of credit and loans that people seek online. Peer-to-peer lending services such as Loans Canada and Mogo let investors loan people money without using a bank. However, because investors always want to mitigate risk, a client has asked that you help them predict credit risk with machine learning techniques.
 
-In this repo we have built and evaluated several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so you will need to employ different techniques for training and evaluating models with imbalanced classes. I have used the two following techniques to build and evaluate models using imbalanced-learn and Scikit-learn libraries:
+In this assignment you will build and evaluate several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so you will need to employ different techniques for training and evaluating models with imbalanced classes. You will use the imbalanced-learn and Scikit-learn libraries to build and evaluate models using the two following techniques:
 
 1. [Resampling](#Resampling)
 2. [Ensemble Learning](#Ensemble-Learning)
+
+- - -
+
+### Files
+
+[Resampling Starter Notebook](Starter_Code/credit_risk_resampling.ipynb)
+
+[Ensemble Starter Notebook](Starter_Code/credit_risk_ensemble.ipynb)
+
+[Lending Club Loans Data](Instructions/Resources/LoanStats_2019Q1.csv.zip)
 
 - - -
 
@@ -83,3 +93,17 @@ Use the quarterly data from the LendingClub data provided in the `Resources` fol
 Refer to the [imbalanced-learn](https://imbalanced-learn.readthedocs.io/en/stable/) and [scikit-learn](https://scikit-learn.org/stable/) official documentation for help with training the models. Remember that these models all use the model->fit->predict API.
 
 For the ensemble learners, use 100 estimators for both models.
+
+- - -
+
+### Submission
+
+* Create Jupyter notebooks for the homework and host the notebooks on GitHub.
+
+* Include a markdown that summarizes your homework and include this report in your GitHub repository.
+
+* Submit the link to your GitHub project to Bootcamp Spot.
+
+- - -
+
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
