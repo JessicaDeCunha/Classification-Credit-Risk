@@ -1,25 +1,13 @@
 # Risky Business
 
-![Credit Risk](Images/credit-risk.jpg)
-
 ## Background
 
-Mortgages, student and auto loans, and debt consolidation are just a few examples of credit and loans that people seek online. Peer-to-peer lending services such as Loans Canada and Mogo let investors loan people money without using a bank. However, because investors always want to mitigate risk, a client has asked that you help them predict credit risk with machine learning techniques.
+Mortgages, student and auto loans, and debt consolidation are just a few examples of credit and loans that people seek online. Peer-to-peer lending services such as Loans Canada and Mogo let investors loan people money without using a bank. However, because investors always want to mitigate risk, it would be helpful to predict credit risk with machine learning techniques.
 
-In this assignment you will build and evaluate several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so you will need to employ different techniques for training and evaluating models with imbalanced classes. You will use the imbalanced-learn and Scikit-learn libraries to build and evaluate models using the two following techniques:
+In this repo I have built and evaluated several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so you will need to employ different techniques for training and evaluating models with imbalanced classes. I have used the two following techniques to build and evaluate models using imbalanced-learn and Scikit-learn libraries:
 
 1. [Resampling](#Resampling)
 2. [Ensemble Learning](#Ensemble-Learning)
-
-- - -
-
-### Files
-
-[Resampling Starter Notebook](Starter_Code/credit_risk_resampling.ipynb)
-
-[Ensemble Starter Notebook](Starter_Code/credit_risk_ensemble.ipynb)
-
-[Lending Club Loans Data](Instructions/Resources/LoanStats_2019Q1.csv.zip)
 
 - - -
 
@@ -27,9 +15,9 @@ In this assignment you will build and evaluate several machine learning models t
 
 #### Resampling
 
-Use the [imbalanced learn](https://imbalanced-learn.readthedocs.io) library to resample the LendingClub data and build and evaluate logistic regression classifiers using the resampled data.
+Using the [imbalanced learn](https://imbalanced-learn.readthedocs.io) library, I resampled the LendingClub data to build and evaluate logistic regression classifiers using the resampled data.
 
-You need to:
+Steps taken:
 
 1. Oversample the data using the `Naive Random Oversampler` and `SMOTE` algorithms.
 
@@ -38,7 +26,7 @@ You need to:
 3. Over- and undersample using a combination `SMOTEENN` algorithm.
 
 
-For each of the above, you will need to:
+Further steps:
 
 1. Train a `logistic regression classifier` from `sklearn.linear_model` using the resampled data.
 
@@ -48,14 +36,16 @@ For each of the above, you will need to:
 
 4. Print the `imbalanced classification report` from `imblearn.metrics`.
 
-
-Use the above to answer the following questions:
+### Questions
 
 * Which model had the best balanced accuracy score?
->
+> The SMOTEEN model has the best balanced accuracy score because it is closest to 1.0
 * Which model had the best recall score?
->
+> Each model has a consistent total recall score of 0.99; a score above 0.50 is considered a good score.
 * Which model had the best geometric mean score?
+> The Naive Random Oversampling, SMOTE Oversampling, and the Combination (Over and Under) Sampling all produced the highest geometric mean score of 0.99
+
+---
 
 #### Ensemble Learning
 
@@ -73,16 +63,16 @@ Complete the following steps for each model:
 
 5. For the balanced random forest classifier only, print the feature importance sorted in descending order (most important feature to least important) along with the feature score.
 
-
-Use the above to answer the following questions:
+### Questions
 
 * Which model had the best balanced accuracy score?
-
+> the Easy Ensemble Classifier has the best balanced accuracy score as it is closer to 1.0
 * Which model had the best recall score?
-
+> both models have a recall score of 0.99
 * Which model had the best geometric mean score?
-
+> both models have a geometric mean score of 0.99
 * What are the top three features?
+>the top three features are interest rate, borrower income, and debt to income
 
 - - -
 
@@ -93,17 +83,3 @@ Use the quarterly data from the LendingClub data provided in the `Resources` fol
 Refer to the [imbalanced-learn](https://imbalanced-learn.readthedocs.io/en/stable/) and [scikit-learn](https://scikit-learn.org/stable/) official documentation for help with training the models. Remember that these models all use the model->fit->predict API.
 
 For the ensemble learners, use 100 estimators for both models.
-
-- - -
-
-### Submission
-
-* Create Jupyter notebooks for the homework and host the notebooks on GitHub.
-
-* Include a markdown that summarizes your homework and include this report in your GitHub repository.
-
-* Submit the link to your GitHub project to Bootcamp Spot.
-
-- - -
-
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
